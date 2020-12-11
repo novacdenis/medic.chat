@@ -1,0 +1,681 @@
+@import config
+@import default
+@import animations
+
+#header
+  background-color: $accent
+  padding: 15px 0
+  z-index: 997
+
+  .container
+    @include flex()
+
+  .mobile-menu-btn
+    display: none
+
+    .svg-icon
+      width: 25px
+
+      path
+        fill: #fff
+
+  .svg-icon
+    width: 25px
+
+  .logo
+    font-size: 23px
+    color: #fff
+    cursor: pointer
+    user-select: none
+    font-weight: 700
+
+  #nav
+    z-index: 999
+    li
+      display: inline-block
+
+    a
+      padding: 6px 10px
+      color: #fff
+      font-weight: 500
+
+      &:hover
+        color: $accent2
+
+#welcome-slide
+  height: 90vh
+  background-image: url(../img/dest/welcome-bg.jpg)
+  @include bgImg()
+
+  .container
+    height: 90vh
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+  .card
+    background-color: rgba(#fff, .8)
+    padding: 30px 40px
+    border-radius: 15px
+    box-shadow: 0 3px 6px 0 rgba(#000, .3)
+    max-width: 760px
+
+    &-title
+      font-size: 52px
+      line-height: 62px
+
+    &-subtitle
+      font-size: 18px
+      color: $accent
+      margin-bottom: 25px
+
+    &-btn
+      margin-top: 60px
+
+#benefits
+  margin-top: -80px
+
+  .container
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
+    gap: 20px
+
+  .benefit-item
+    padding: 30px 20px 30px 90px
+    border-radius: 15px
+    position: relative
+    overflow: hidden
+
+    &:hover
+      .icon
+        top: 50%
+        transform: translateX(-50%) translateY(-50%)
+
+    &:nth-of-type(1)
+      background-color: $accent
+
+    &:nth-of-type(2)
+      background-color: #3D7DCC
+
+    &:nth-of-type(3)
+      background-color: $accent2
+
+  .title
+    font-size: 24px
+    margin-bottom: 27px
+    color: #fff
+
+  .text
+    color: darken(#fff, 5%)
+    font-size: 17px
+    position: relative
+
+    &::after
+      position: absolute
+      content: ""
+      width: 50px
+      height: 2px
+      left: 0
+      top: -10px
+      background-color: rgba(#fff, .75)
+
+  .order
+    position: absolute
+    bottom: -50px
+    right: -10px
+    font-size: 80px
+    font-weight: 700
+    user-select: none
+    pointer-events: none
+    color: rgba(#fff, .5)
+
+  .icon
+    position: absolute
+    top: 35px
+    left: 45px
+    transform: translateX(-50%)
+    transition: .3s ease-in-out
+    img
+      width: 40px
+
+#about-us
+
+  .check-list
+    display: block
+    margin-bottom: 30px
+
+  .check-item
+    @include flex(center, flex-start)
+    svg
+      width: 20px
+      path
+        fill: $accent
+
+    p
+      font-size: 20px
+      margin-left: 10px
+      font-weight: 500
+
+  @media screen and ( max-width: 1301px )
+    margin-bottom: 20px
+
+  @media screen and ( max-width: 1200px )
+    .grid-2-sect
+      grid-template-columns: 1fr
+
+    .right-side
+      display: none
+
+    .left-side
+      max-width: 640px
+      margin: 0 auto
+
+#specs
+  background-color: #F0F9FA
+
+  .left-side
+    background-image: url(../img/dest/specs.png)
+    @include bgImg()
+
+  .right-side
+    padding: 100px 0
+    padding-right: 100px
+    padding-left: 100px
+    align-items: flex-end
+    justify-self: end
+
+  .specs-container
+    margin-top: 50px
+
+  .head
+    position: relative
+    span
+      transition: .25s ease
+      position: absolute
+      left: 0
+      svg
+        width: 12px
+
+    &.active
+      h3
+        color: $accent2
+
+      span
+        transform: rotate(90deg)
+        top: 2px
+        path
+          fill: $accent2
+
+  @media screen and ( max-width: 1475px )
+    .right-side
+      padding: 100px 25px 100px 50px
+
+  @media screen and ( max-width: 1110px )
+    .left-side
+      display: none
+
+    .grid-2-sect
+      grid-template-columns: 1fr
+
+    .right-side
+      justify-self: center
+      padding: 80px 50px
+
+#department
+
+  .department-container
+    margin-top: 50px
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr
+    gap: 30px
+
+    @media screen and ( max-width: 1120px )
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr 1fr 1fr
+      gap: 20px
+
+    @media screen and ( max-width: 720px )
+      grid-template-columns: 1fr
+      grid-template-rows: auto
+      gap: 10px
+
+      .department-box
+        .title
+          font-size: 20px
+
+        .text
+          font-size: 16px
+
+        .img
+          img
+            max-height: 45px
+
+  .department-box
+    padding: 40px 20px
+    border-radius: 10px
+    border: 1px solid #e6e6e6
+    transition: .25s ease-in
+
+    &:hover
+      border-color: $accent2
+      img
+        animation: pulse 1s infinite
+
+    .img
+      margin-bottom: 30px
+      animation-duration: 1s
+      img
+        max-height: 64px
+
+    .title
+      margin-bottom: 10px
+      font-size: 26px
+
+    .text
+      font-size: 18px
+
+#banner
+  background-color: #F0F9FA
+  position: relative
+
+  .left-side
+    @include flex(flex-end, center)
+
+  .right-side
+    padding: 100px 0
+    max-width: 640px
+    margin: 0 auto
+
+    .btn, .section-description
+      align-self: flex-start
+
+  @media screen and ( max-width: 1200px )
+    .grid-2-sect
+      grid-template-columns: 1fr
+
+    .left-side
+      display: none
+
+#blog
+  .blog-container
+    margin-top: 70px
+    margin-bottom: 60px
+
+#contact
+  .right-side
+    justify-content: flex-end
+
+  .contact-info
+    h3
+      margin-top: 25px
+      margin-bottom: 5px
+
+    p:not(.info)
+      margin-bottom: 15px
+
+    .info
+      margin-bottom: 5px
+
+  @media screen and ( max-width: 920px )
+    .grid-2-sect
+      grid-template-columns: 1fr
+      grid-template-rows: 1fr 1fr
+      gap: 25px
+
+    .right-side, .left-side
+      align-items: flex-start
+      width: 640px
+      margin: 0 auto
+
+  @media screen and ( max-width: 680px )
+    .right-side, .left-side
+      width: 100%
+      justify-content: flex-start
+
+    .contact-form
+      width: 100%
+
+    .contact-info
+      h3
+        font-size: 16px
+
+    .additional-info
+      font-size: 14px
+
+.footer
+  overflow-x: hidden
+  background-color: $accent
+  color: darken(#fff, 10%)
+
+  a
+    transition: .2s
+    color: darken(#fff, 10%)
+
+    &:hover
+      color: $accent2
+
+  .payment-item
+    display: inline-block
+    margin-right: 5px
+
+    &:hover
+      svg
+        path
+          fill: $accent2
+
+    svg
+      width: 35px
+
+      path
+        fill: darken(#fff, 10%)
+        transition: .2s
+
+  input[type=email]
+    min-height: 59px
+    padding-right: 173.06px
+    width: 100%
+
+  .btn
+    padding: 16px 36px
+    position: absolute
+    right: -2px
+    top: 0
+    height: 59px
+
+  &__top-line, &__main-content
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 40px 15px
+    border-bottom: 1px solid rgba(#fff, .2)
+
+    form
+      width: 100%
+      max-width: 680px
+      min-width: 490px
+
+    .social-media
+      display: flex
+      align-items: center
+
+      &-icon
+        margin: 0 10px
+
+        &:hover
+          svg
+            path
+              fill: $accent2
+
+        &.fb
+          svg
+            width: 14px
+
+      svg
+        width: 20px
+        path
+          transition: .2s
+          fill: darken(#fff, 10%)
+
+    .left-side
+      position: relative
+
+  .secondary-menu
+    max-width: 680px
+    text-align: right
+    a
+      display: inline-block
+      padding: 10px
+
+  &__bottom-line
+    padding: 20px 10px
+    display: flex
+    justify-content: space-between
+    font-size: 14px
+
+#team
+  background-color: #F0F9FA
+  padding: 100px 0
+
+  .section-title
+    margin-bottom: 80px
+
+  .splide__arrow
+    background: transparent
+    path
+      transition: .25s ease
+
+    &:hover
+      path
+        fill: $accent2
+
+    svg
+      width: 2.2em
+      height: 2.2em
+
+  button[disabled]
+    opacity: 0
+    transition: .25s ease-in
+    transform: scale(.1)
+
+  .splide__slide
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &-img
+      width: 120px
+      height: 120px
+      overflow: hidden
+      border-radius: 50%
+      margin-right: 25px
+
+      img
+        width: 100%
+        object-fit: cover
+
+    &-pos
+      margin-bottom: 20px
+
+    &-social
+      span
+        display: inline-block
+        &:nth-of-type(1)
+          transform: translateY(-3px)
+
+      svg
+        width: 15px
+
+  @media screen and ( max-width: 500px )
+    padding: 50px 0
+
+    .splide__arrow
+      display: none
+
+    .splide__slide
+      flex-direction: column
+
+      &-img
+        margin-right: 0
+        margin-bottom: 20px
+
+      &-pos
+        margin-bottom: 13px
+
+      &-social
+        font-size: 14px
+
+    .splide__slide-content
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+
+#blogs-list
+  padding: 75px 0
+  .blogs
+
+    &-date
+      text-align: center
+      font-size: 26px
+      margin-bottom: 62px
+
+    &-sort
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 50px
+
+      @media screen and ( max-width: 820px )
+        flex-direction: column-reverse
+
+        .blogs-search
+          margin-top: 30px
+
+    &-sorting
+      a
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 20px
+        color: #333
+        transition: .25s ease-in
+
+        .icon
+          transition: .25s ease-in
+          transform: translateY(2px) rotate(90deg)
+          width: 15px
+
+        &:hover
+          color: $accent2
+
+          .icon
+            fill: $accent2
+
+        span
+          margin: 0 5px
+      
+        &.active
+          .icon
+            transform: rotate(-90deg)
+
+    &-page-navigation
+      margin-top: 60px
+      display: flex
+      align-items: center
+      justify-content: center
+      max-width: 500px
+      margin: 60px auto 0
+      
+      a
+        margin: 15px
+
+
+
+
+#blog_single
+  overflow: hidden
+  padding: 100px 0
+  @media screen and ( max-width: 540px )
+    padding: 45px 0
+
+  .blogs-search
+    margin-bottom: 50px
+
+  .blog_single
+
+    &-container
+      display: grid
+      grid-template-columns: repeat(12, 1fr)
+      grid-template-rows: auto
+      gap: 30px
+
+    &-left-side
+      grid-column: 1 / 9
+
+    &-right-side
+      grid-column: 9 / 13
+      position: sticky
+      top: 15px
+
+      & > div:not(:last-of-type)
+        padding-bottom: 50px
+        border-bottom: 2px solid rgba(#000, .15s)
+    
+    &-img
+      position: relative
+      overflow: hidden
+      border-radius: 6px
+
+      img
+        object-fit: cover
+        width: 100%
+
+    &-title
+      position: absolute
+      width: 100%
+      padding: 15px
+      left: 0
+      bottom: 0
+      background-color: rgba(#000, .56)
+      color: #fff
+
+    &-text
+      margin-top: 80px
+      h1
+        font-size: 32px
+        margin-bottom: 20px
+
+      p
+        font-size: 18px
+        margin-bottom: 15px
+
+    &-recent
+      overflow: hidden
+
+
+  .recent-blog
+    margin-bottom: 15px
+
+    a
+      color: #333333
+
+      &:hover
+        color: $accent2
+
+
+#popup
+  position: fixed
+  top: 5% 
+  left: 5%
+  width: 90%
+  height: 90%
+  background-color: #fff
+  z-index: 9999
+  padding: 20px
+  display: flex
+  align-items: flex-start
+  justify-content: flex-start
+  flex-wrap: wrap
+  padding: 80px 20px 20px
+  overflow-y: auto
+  display: none
+
+  form
+    position: absolute
+    top: 20px
+    left: 40px
+
+  .first-letter
+    margin-left: 10px
+
+  .definitions-container
+    max-width: 520px
+    margin: 10px
+
+  .definition
+    padding: 6px 10px
+    font-size: 18px
+
+@import media

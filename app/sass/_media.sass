@@ -1,0 +1,258 @@
+@media screen and ( max-width: 1200px )
+  #benefits
+    .icon
+      display: none
+
+    .benefit-item
+      padding-left: 30px
+
+@media screen and ( max-width: 1000px )
+
+  #blog_single
+
+    .blogs-search
+      width: 100%
+      max-width: 100%
+
+    .blog_single
+      &-container
+        gap: 0px
+        row-gap: 80px
+
+      &-left-side
+        grid-column: 1 / 13
+
+      &-right-side
+        grid-column: 1 /13
+
+        & > div
+          padding-bottom: 50px
+          border-bottom: none
+
+@media screen and ( max-width: 920px )
+  .footer
+    &__top-line
+      flex-direction: column
+
+      .social-media
+        margin-top: 20px
+
+@media screen and ( max-width: 840px )
+  .footer
+    &__main-content
+      flex-direction: column
+
+    .secondary-menu
+      text-align: left
+      margin-top: 40px
+
+@media screen and ( max-width: 760px )
+  #header
+    position: relative
+    padding: 10px 0
+
+    .mobile-menu-btn
+      display: block
+
+    #nav
+      position: fixed
+      transition: .3s ease-in-out
+      top: 77px
+      left: 0
+      min-width: 280px
+      width: 100%
+      background-color: $accent
+      padding: 15px
+      padding-left: 0
+      padding-top: 0
+      max-height: 0
+      overflow: hidden
+      pointer-events: none
+      opacity: 0
+
+      &.active
+        opacity: 1
+        pointer-events: all
+        top: 57px
+
+      li
+        display: block
+        margin-bottom: 10px
+
+      a
+        font-size: 20px
+
+@media screen and ( max-width: 680px )
+  #blog_single
+    .blog_single
+      &-img
+        h1
+          font-size: 20px
+
+      &-text
+        margin-bottom: 20px
+        margin-top: 55px
+
+        h1
+          font-size: 24px
+
+        p
+          font-size: 16px
+
+  .btn
+    padding: 10px 15px
+
+  #welcome-slide
+    height: 600px
+
+    .container
+      justify-content: center
+      height: 600px
+
+    .card
+      padding: 30px 20px
+
+      &-title
+        font-size: 42px
+        line-height: 52px
+
+      &-subtitle
+        margin-bottom: 10px
+
+      &-btn
+        margin-top: 20px
+
+  #about-us
+    .check-item
+      p
+        font-size: 16px
+
+@media screen and ( max-width: 620px )
+  #banner
+    .right-side
+      padding: 70px 30px
+
+@media screen and ( max-width: 520px )
+  #welcome-slide
+    .card
+      padding: 20px 10px 20px 20px
+
+      &-title
+        font-size: 32px
+        line-height: 42px
+
+      &-subtitle
+        margin-bottom: 0px
+
+  #specs
+    .right-side
+      padding: 50px 20px
+
+    .specs-container
+      margin-top: 25px
+
+      .head h3
+        font-size: 16px
+      .body
+        font-size: 14px
+
+@media screen and ( max-width: 540px )
+  #blogs-list
+    padding: 45px 0
+
+    .blogs
+      &-date
+        font-size: 20px
+
+      &-search
+        .btn
+          position: static
+          margin-top: 10px
+
+        .input
+          min-width: 260px
+          padding-left: 12px
+
+        .input-group
+          align-items: flex-start
+
+  .footer
+    .input-group
+      justify-content: flex-start
+      align-items: flex-start
+
+    .btn
+      position: static
+
+    input[type=email]
+      padding-right: 20px
+
+    form
+      min-width: initial
+
+    &__top-line
+      .input-group, .left-side
+        width: 100%
+
+    &__bottom-line
+      flex-direction: column
+      p
+        margin-bottom: 10px
+
+@media screen and ( max-width: 400px )
+  .blogs-search
+    .input
+      padding-right: 25px
+      min-width: 300px
+
+    .btn
+      position: static
+      margin-top: 10px
+
+    .input-group
+      align-items: flex-start
+
+  #blog_single
+    .blog_single
+      &-text
+        margin-top: 120px
+        h1
+          font-size: 22px
+
+      &-img
+        overflow: visible
+
+        img
+          border-radius: 5px 5px 0 0
+
+        h1
+          font-size: 18px
+          top: 100%
+          border-radius: 0 0 5px 5px
+          bottom: initial
+
+  #blogs-list
+    padding: 45px 0
+
+    .blogs
+      &-date
+        font-size: 18px
+
+  #welcome-slide
+    .card
+      &-title
+        font-size: 26px
+        line-height: 36px
+
+  #benefits
+    .container
+      display: flex
+      flex-direction: column
+
+    .benefit-item
+      padding: 20px 15px
+      padding-right: 10px
+
+  #banner
+    .right-side
+      padding: 50px 15px
