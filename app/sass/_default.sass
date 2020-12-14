@@ -22,6 +22,9 @@
   background-size: cover
   background-repeat: no-repeat
 
+.main.simple
+  background-color: #f4f4f4
+
 .svg-icon
   max-width: 50px
   min-width: 10px
@@ -116,7 +119,6 @@ span.mark
   position: relative
   font-weight: 600
 
-
   &::after
     content: ""
     position: absolute
@@ -141,6 +143,11 @@ span.mark
 
   @media screen and ( max-width: 1300px )
     width: calc(100% - 20px)
+
+.form-title
+  margin-bottom: 45px
+  text-align: center
+  font-size: 23px
 
 .grid-2-sect
   display: grid
@@ -281,7 +288,6 @@ p strong
 
       &:hover
         color: rgba($accent2, .95)
-        
 
   @media screen and ( max-width: 1200px )
     &-container
@@ -303,16 +309,22 @@ p strong
 
 .input
   padding: 12px 20px
-  padding-right: 50px
+  padding-right: 40px
   width: 100%
   margin-bottom: 15px
-  border: 1px solid transparent
+  border: 2px solid transparent
   outline: none
   background-color: #f1f1f1
   border-radius: 6px
   transition: .25s ease
 
+  @media screen and ( max-width: 540px )
+    padding: 12px 15px
+    padding-right: 35px
+    font-size: 14px
+
   &:hover
+    border-color: #f4f4f4
     background-color: #fff
     box-shadow: 0 0 2px 0 rgba(#000, .08), 0 1px 2px 0 rgba(#000,.05)
 
@@ -372,17 +384,17 @@ section
     flex-direction: column
 
 .blogs-search
-      position: relative
-      max-width: 520px
-      overflow: hidden
+  position: relative
+  max-width: 520px
+  overflow: hidden
 
-      .input-group
-        justify-content: flex-start
+  .input-group
+    justify-content: flex-start
 
-      .input
-        margin: 0
-        padding-right: 50px
-        min-width: 350px
+    .input
+      margin: 0
+      padding-right: 50px
+      min-width: 350px
 
       .btn
         padding: 12px 25px
