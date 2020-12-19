@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const timeElapsed = Date.now();
     const today = new Date(timeElapsed);
-    
+
     let monthNumb = today.getMonth();
 
     let mothName = {
@@ -191,8 +191,8 @@ document.addEventListener("DOMContentLoaded", () => {
       9: "Septembrie",
       10: "Octombrie",
       11: "Noiebrie",
-      12: "Decembrie"
-    }
+      12: "Decembrie",
+    };
 
     let monthStr;
 
