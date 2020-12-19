@@ -734,6 +734,29 @@
     left: 50%
     transform: translateX(-50%)
 
+  .errors, .succes
+    background-color: #f4f4f4
+    border-radius: 6px
+    margin-bottom: 20px
+    position: relative
+    &-item
+      color: #f85149
+      font-weight: 500
+      padding: 10px 30px
+      &:nth-of-type(1)
+        padding-top: 20px
+      &:last-of-type
+        padding-bottom: 20px
+
+    &-icon
+      width: 20px
+      position: absolute
+      right: 20px
+      top: 10px
+  .succes-item
+    color: #21ba45
+      
+    
   .footer
     position: absolute
     bottom: 50px
@@ -743,5 +766,19 @@
     color: #ccc
     width: 100%
     text-align: center
+  
+  .gender
+    width: 54px
+    background-color: #E5E5E5
+    height: 27px
+    border-radius: 6px
+    position: relative
+    input
+      position: absolute
+      top: 0
+      left: 0
+      opacity: .4
+      visibility: hidden
+
 
 @import media
